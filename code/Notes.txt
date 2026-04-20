@@ -1,0 +1,14 @@
+To use the proposed ImproveLoss, modify the configuration file as follows:
+
+pixel_loss=dict(
+    type='ImproveLoss',
+    pixel_weight=1.0,
+    perceptual_weight=1.0,
+    temporal_weight=0.2,
+    edge_weight=0.5,
+    multi_scale_weights=[1.0, 0.5, 0.25],
+    use_perceptual=True,
+    use_temporal=True,
+    use_edge=True,
+    reduction='mean'
+)
